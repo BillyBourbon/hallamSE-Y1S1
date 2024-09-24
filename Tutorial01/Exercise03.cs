@@ -11,19 +11,20 @@ person1.name = Console.ReadLine();
 Console.WriteLine("Please Enter Your Age");
 person1.age = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Please Enter Your House Number");
-person1.houseNumber = Convert.ToInt32(Console.ReadLine());
+person1.address.houseNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Please Enter Your Street Name");
-person1.streetName = Console.ReadLine();
+person1.address.streetName = Console.ReadLine();
 Console.WriteLine("Please Enter Your Post Code");
-person1.postCode = Console.ReadLine();
+person1.address.postCode = Console.ReadLine();
 
 
-Console.WriteLine($"Welcome {person1.name}. Your {person1.age} Years Old. You Live At Number {person1.houseNumber} on {person1.streetName} Street, Post Code: {person1.postCode}");
+Console.WriteLine($"Welcome {person1.name}. Your {person1.age} Years Old. You Live At Number {person1.address.houseNumber} on {person1.address.streetName} Street, Post Code: {person1.address.postCode}");
 
-class Person : Address
+class Person
 {
     public string name;
     public int age;
+    public Address address = new Address();
 }
 class Address 
 {
