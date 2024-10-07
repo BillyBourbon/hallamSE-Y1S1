@@ -13,7 +13,7 @@ void main()
 {
     ImperialHeight userHeight = getHeightInFt();
 
-    double userHeightAsMetres = imperialHeightToMetres(userHeight);
+    float userHeightAsMetres = imperialHeightToMetres(userHeight);
 
     Console.WriteLine($"User Height In Feet/inches: {userHeight.feet}ft {userHeight.inches}\"\nUser Height In Meters: {userHeightAsMetres}m");
 }
@@ -48,7 +48,7 @@ ImperialHeight getHeightInFt()
     return userHeight;
 }
 
-double imperialHeightToMetres(ImperialHeight height)
+float imperialHeightToMetres(ImperialHeight height)
 {
     const float inch = 0.0254f; // 1inch = 0.0254meter
 
@@ -56,7 +56,7 @@ double imperialHeightToMetres(ImperialHeight height)
     inches += (height.feet * 12); // 1foot = 12inch
 
     float meters = inches * inch;
-    double metersDecimal = floatTo2Dp(meters);
+    float metersDecimal = floatTo2Dp(meters);
     return metersDecimal;
 }
 
