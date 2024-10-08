@@ -28,12 +28,9 @@ Data encryptData(Data data)
     data.number1 = data.number3;
     data.number3 = placeHolder;
 
-    data.number1 += 5;
-    data.number2 += 5;
-    data.number3 += 5;
-    data.number1 = clampInt(data.number1);
-    data.number2 = clampInt(data.number2);
-    data.number3 = clampInt(data.number3);
+    data.number1 = clampInt(data.number1 + 5);
+    data.number2 = clampInt(data.number2 + 5);
+    data.number3 = clampInt(data.number3 + 5);
 
     return data;
 }
